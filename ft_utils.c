@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 12:35:40 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/01 08:34:33 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/01 09:11:13 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,17 @@ t_stack	*ft_new_node(int elem)
 	stack->elem = elem;
 	stack->next = 0;
 	return (stack);
+}
+
+int	ft_stacksize(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	while (stack)
+	{
+		i++;
+		stack = stack->next;
+	}
+	return (i);
 }

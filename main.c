@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:55:01 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/01 08:40:12 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/01 09:04:04 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,8 @@ int	main(int argc, char *argv[])
 	if (argc < 2)
 		return (0);
 	stack_a = ft_argv_to_stack(argc, argv);
-	stack_b = ft_new_node(0);
-	if (!stack_b)
-	{
-		ft_free_stack(stack_a);
-		ft_error(2);
-	}
+	stack_b = 0;
+	
 	ft_free_stack(stack_a);
 	ft_free_stack(stack_b);
 	return (0);
@@ -67,8 +63,14 @@ int	ft_check_arg(t_stack *stack, char *arg)
 
 	i = -1;
 	while (++i < ft_strlen(arg))
-		if (arg[i] < 48 || arg[i] > 57)
+		if ((i != 0 && arg[i] == '-') || ((arg[i] < 48 || arg[i] > 57)
+				&& arg[i] != '-'))
 			return (1);
+	if (ft_atoi(arg) < -2147483647 || ft_atoi(arg) > 2147483647)
+	{
+		ft_printf("Error\nLos números introducidos deben ser tipo int\n");
+		return (1);
+	}
 	if (!stack)
 		return (0);
 	aux = stack;
