@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:54:04 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/01 12:02:39 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/01 12:27:33 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,5 @@ void	ft_reverse(t_stack **stack);
 void	ft_reverse_a(t_stack **stack_a);
 void	ft_reverse_b(t_stack **stack_b);
 void	ft_reverse_ab(t_stack **stack_a, t_stack **stack_b);
-
-void ft_print_stacks(t_stack *stack_a, t_stack *stack_b);
 
 #endif

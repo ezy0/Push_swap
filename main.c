@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:55:01 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/01 12:08:49 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/01 12:27:14 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int argc, char *argv[])
 		return (0);
 	stack_a = ft_argv_to_stack(argc, argv);
 	stack_b = 0;
-	
+
 	ft_free_stack(stack_a);
 	ft_free_stack(stack_b);
 	return (0);
