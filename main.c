@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:55:01 by migmoren          #+#    #+#             */
-/*   Updated: 2023/07/27 12:49:23 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/01 08:40:12 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,50 +20,58 @@ int	main(int argc, char *argv[])
 	if (argc < 2)
 		return (0);
 	stack_a = ft_argv_to_stack(argc, argv);
-	stack_b = (t_stack *)malloc(sizeof(t_stack));
+	stack_b = ft_new_node(0);
 	if (!stack_b)
 	{
-		//free(stack_a);
+		ft_free_stack(stack_a);
 		ft_error(2);
 	}
-	//free(stack_a); Funcion que recorre el stack y libera nodo por nodo
-	//free(stack_b);
+	ft_free_stack(stack_a);
+	ft_free_stack(stack_b);
 	return (0);
 }
 
-t_stack	*ft_argv_to_stack(int size, char *argv[]) //Adaptarlo para usar la pila en vez de la lista
+t_stack	*ft_argv_to_stack(int size, char *argv[])
 {
-	int	i;
+	int		i;
 	t_stack	*stack;
+	t_stack	*aux;
 
-	i = 1;
-	stack = (t_stack *)malloc(sizeof(t_stack));
-	if (!stack)
-		ft_error(2);
-	while (i < size)
+	i = 0;
+	stack = 0;
+	aux = 0;
+	while (++i < size)
 	{
 		if (ft_check_arg(stack, argv[i]))
 		{
-			//free(stack);
+			ft_free_stack(stack);
 			ft_error(3);
 		}
-		stack[i - 1].elem = ft_atoi(argv[i]);
-		i++;
+		if (!stack)
+			stack = ft_new_node(ft_atoi(argv[i]));
+		if (aux)
+		{
+			aux->next = ft_new_node(ft_atoi(argv[i]));
+			aux = aux->next;
+		}
+		if (i == 1)
+			aux = stack;
 	}
 	return (stack);
 }
 
 int	ft_check_arg(t_stack *stack, char *arg)
 {
-	int	i;
-	t_stack *aux;
+	int		i;
+	t_stack	*aux;
 
 	i = -1;
-	aux = stack;
 	while (++i < ft_strlen(arg))
 		if (arg[i] < 48 || arg[i] > 57)
 			return (1);
-	i = -1;
+	if (!stack)
+		return (0);
+	aux = stack;
 	while (aux)
 	{
 		if (aux->elem == ft_atoi(arg))
