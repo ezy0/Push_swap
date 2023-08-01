@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:54:04 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/01 09:10:21 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/01 12:02:39 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,20 @@ int		ft_stacksize(t_stack *stack);
 void	ft_swap_a(t_stack *stack_a);
 void	ft_swap_b(t_stack *stack_b);
 void	ft_swap_ab(t_stack *stack_a, t_stack *stack_b);
+//PUSH
+void	ft_push_a(t_stack **stack_a, t_stack **stack_b);
+void	ft_push_b(t_stack **stack_a, t_stack **stack_b);
+//ROTATE
+void	ft_rotate(t_stack **stack);
+void	ft_rotate_a(t_stack **stack_a);
+void	ft_rotate_b(t_stack **stack_b);
+void	ft_rotate_ab(t_stack **stack_a, t_stack **stack_b);
+//REVERSE
+void	ft_reverse(t_stack **stack);
+void	ft_reverse_a(t_stack **stack_a);
+void	ft_reverse_b(t_stack **stack_b);
+void	ft_reverse_ab(t_stack **stack_a, t_stack **stack_b);
+
+void ft_print_stacks(t_stack *stack_a, t_stack *stack_b);
 
 #endif

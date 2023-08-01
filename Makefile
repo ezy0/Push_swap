@@ -6,7 +6,7 @@
 #    By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/27 10:48:27 by migmoren          #+#    #+#              #
-#    Updated: 2023/08/01 09:00:27 by migmoren         ###   ########.fr        #
+#    Updated: 2023/08/01 12:05:22 by migmoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc -Wall -Wextra -Werror -g -fsanitize=address
 
 INCLUDE = -Llibft -lft -I ./
 
-SRC = main.c ft_handler.c ft_utils.c swap.c
+SRC = main.c ft_handler.c ft_utils.c swap.c push.c rotate.c reverse.c
 OBJS = ${SRC:.c=.o}
 
 %.o: %.c libft/libft.a
