@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:54:04 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/01 12:27:33 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/02 20:48:41 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int		ft_check_arg(t_stack *list, char *arg);
 void	ft_free_stack(t_stack *stack);
 t_stack	*ft_new_node(int elem);
 int		ft_stacksize(t_stack *stack);
+int		ft_index(t_stack *stack, int elem);
+int		*ft_cpy_stack(t_stack *stack);
 //SWAP
 void	ft_swap_a(t_stack *stack_a);
 void	ft_swap_b(t_stack *stack_b);
@@ -46,5 +48,8 @@ void	ft_reverse(t_stack **stack);
 void	ft_reverse_a(t_stack **stack_a);
 void	ft_reverse_b(t_stack **stack_b);
 void	ft_reverse_ab(t_stack **stack_a, t_stack **stack_b);
+//SORT
+int		ft_is_sorted(t_stack *stack_a, t_stack *stack_b);
+void	ft_sort(t_stack *stack_a, t_stack *stack_b);
 
 #endif
