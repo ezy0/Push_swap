@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:54:04 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/02 20:48:41 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:25:42 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 typedef struct s_stack {
 	int				elem;
 	int				pos;
+	int				conversion;
 	struct s_stack	*next;
 }						t_stack;
 
@@ -50,6 +51,15 @@ void	ft_reverse_b(t_stack **stack_b);
 void	ft_reverse_ab(t_stack **stack_a, t_stack **stack_b);
 //SORT
 int		ft_is_sorted(t_stack *stack_a, t_stack *stack_b);
-void	ft_sort(t_stack *stack_a, t_stack *stack_b);
+void	ft_sort(t_stack **stack_a, t_stack **stack_b);
+void	ft_algorithm(t_stack **stack_a, t_stack **stack_b, int size, int digit);
+//RADIX CONVERSION
+int		*ft_cpy_int(int *nums, int size);
+int		*ft_radix_positive(int *nums, int size);
+void	ft_sort_int(int	*cpy, int size);
+int		*ft_conversion(int *nums, int *cpy, int size);
+void	ft_stack_conversion(t_stack	*stack, int *nums);
+
+void	ft_print_stacks(t_stack *stack_a, t_stack *stack_b);
 
 #endif

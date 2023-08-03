@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 12:35:40 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/02 20:50:54 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/03 13:02:48 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,15 @@ t_stack	*ft_new_node(int elem) //OJO CON ESTAS LLAMADAS QUE PUEDE HABER LEAKS
 		return (0);
 	stack->elem = elem;
 	stack->next = 0;
+	stack->conversion = 0;
 	return (stack);
 }
 
 int	ft_stacksize(t_stack *stack)
 {
 	int		i;
-	t_stack *aux;
-	
+	t_stack	*aux;
+
 	i = 0;
 	aux = stack;
 	while (aux)
@@ -74,7 +75,7 @@ int	*ft_cpy_stack(t_stack *stack)
 	int		*nums;
 	int		i;
 	t_stack	*aux;
-	
+
 	nums = (int *)malloc(sizeof(int) * ft_stacksize(stack));
 	if (!nums)
 		return (0);
