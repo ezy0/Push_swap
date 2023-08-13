@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:54:04 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/03 14:25:42 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/13 20:33:49 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,12 @@ int		*ft_radix_positive(int *nums, int size);
 void	ft_sort_int(int	*cpy, int size);
 int		*ft_conversion(int *nums, int *cpy, int size);
 void	ft_stack_conversion(t_stack	*stack, int *nums);
+//SMALL SORT
+void	ft_small_sort(t_stack **stack_a, t_stack **stack_b);
+void	ft_sort_b(t_stack **stack_a, t_stack **stack_b);
+int		ft_ab_sorted(t_stack *stack_a, t_stack *stack_b);
+int		ft_b_sorted(t_stack *stack_b);
+t_stack	*ft_last_elem(t_stack *stack);
 
 void	ft_print_stacks(t_stack *stack_a, t_stack *stack_b);
 

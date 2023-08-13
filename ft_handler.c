@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:04:35 by migmoren          #+#    #+#             */
-/*   Updated: 2023/07/27 12:43:25 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/13 18:32:28 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_error(int error)
 {
-	ft_printf("Error\n");
+	ft_putstr_fd("Error\n", 2);
 	if (error == 2)
-		ft_printf("Fallo asignando memoria\n");
+		ft_putstr_fd("Fallo asignando memoria\n", 2);
 	if (error == 3)
-		ft_printf("Datos incorrectos. Solo enteros y sin duplicados\n");
+		ft_putstr_fd("Datos incorrectos. Solo enteros y sin duplicados\n", 2);
 	exit(1);
 }

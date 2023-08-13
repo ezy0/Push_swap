@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 18:25:51 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/03 14:25:59 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/13 18:10:39 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_is_sorted(t_stack *stack_a, t_stack *stack_b)
 	return (1);
 }
 
-void	ft_sort(t_stack **stack_a, t_stack **stack_b) //Adaptar si eso para stacks <= 5
+void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int	*nums;
 	int	digit;

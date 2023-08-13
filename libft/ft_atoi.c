@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:09:27 by migmoren          #+#    #+#             */
-/*   Updated: 2022/10/17 17:36:25 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/13 19:04:11 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static unsigned long	max_atoi(unsigned long num, int neg)
 	return (num);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int				i;
 	int				neg;
