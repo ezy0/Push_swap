@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 08:59:16 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/03 13:21:53 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/15 10:08:22 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	ft_swap_ab(t_stack *stack_a, t_stack *stack_b)
 	stack_a->conversion = stack_a->next->conversion;
 	stack_a->next->elem = aux;
 	stack_a->next->conversion = bin;
+	aux = stack_b->elem;
 	bin = stack_b->conversion;
 	stack_b->elem = stack_b->next->elem;
 	stack_b->conversion = stack_b->next->conversion;

@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:55:01 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/13 20:16:30 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/15 10:22:03 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char *argv[])
 	if (argc < 2)
 		return (0);
 	if (ft_strlen(argv[1]) == 0)
-		ft_error(3);
+		ft_error();
 	stack_a = ft_argv_to_stack(argc, argv);
 	stack_b = 0;
 	if (ft_stacksize(stack_a) <= 5)
@@ -47,7 +47,7 @@ t_stack	*ft_argv_to_stack(int size, char *argv[])
 		if (ft_check_arg(stack, argv[i]))
 		{
 			ft_free_stack(stack);
-			ft_error(2);
+			ft_error();
 		}
 		if (!stack)
 			stack = ft_new_node((int)ft_atoi(argv[i]));
@@ -72,12 +72,9 @@ int	ft_check_arg(t_stack *stack, char *arg)
 		if ((i != 0 && arg[i] == '-') || ((arg[i] < 48 || arg[i] > 57)
 				&& arg[i] != '-') || (ft_strlen(arg) == 1 && arg[i] == '-'))
 			return (1);
-	if (ft_atoi(arg) < -2147483647 || ft_atoi(arg) > 2147483647
+	if (ft_atoi(arg) < -2147483648 || ft_atoi(arg) > 2147483647
 		|| ft_strlen(arg) > 11)
-	{
-		ft_putstr_fd("Error\n", 2);
 		return (1);
-	}
 	if (!stack)
 		return (0);
 	aux = stack;
