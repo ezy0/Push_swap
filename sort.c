@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 18:25:51 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/16 11:36:58 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/16 12:30:30 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	ft_algorithm(t_stack **stack_a, t_stack **stack_b, int size, int digit)
 	while (++i < size)
 	{	
 		bin = (*stack_a)->conversion >> digit;
-		if (((bin & 1) == 1))
+		if (bin & 1)
 			ft_rotate_a(stack_a);
 		else
 			ft_push_b(stack_a, stack_b);

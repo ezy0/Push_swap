@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 08:59:16 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/15 10:08:22 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/16 13:23:37 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_swap_a(t_stack *stack_a)
 	stack_a->conversion = stack_a->next->conversion;
 	stack_a->next->elem = aux;
 	stack_a->next->conversion = bin;
-	ft_printf("sa\n");
+	write(1, "sa\n", 3);
 }
 
 void	ft_swap_b(t_stack *stack_b)
@@ -41,7 +41,7 @@ void	ft_swap_b(t_stack *stack_b)
 	stack_b->conversion = stack_b->next->conversion;
 	stack_b->next->elem = aux;
 	stack_b->next->conversion = bin;
-	ft_printf("sb\n");
+	write(1, "sb\n", 3);
 }
 
 void	ft_swap_ab(t_stack *stack_a, t_stack *stack_b)
@@ -63,5 +63,5 @@ void	ft_swap_ab(t_stack *stack_a, t_stack *stack_b)
 	stack_b->conversion = stack_b->next->conversion;
 	stack_b->next->elem = aux;
 	stack_b->next->conversion = bin;
-	ft_printf("ss\n");
+	write(1, "ss\n", 3);
 }

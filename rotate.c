@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 10:54:49 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/01 12:02:19 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/16 13:23:22 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,18 @@ void	ft_rotate(t_stack **stack)
 void	ft_rotate_a(t_stack **stack_a)
 {
 	ft_rotate(stack_a);
-	ft_printf("ra\n");
+	write(1, "ra\n", 3);
 }
 
 void	ft_rotate_b(t_stack **stack_b)
 {
 	ft_rotate(stack_b);
-	ft_printf("rb\n");
+	write(1, "rb\n", 3);
 }
 
 void	ft_rotate_ab(t_stack **stack_a, t_stack **stack_b)
 {
 	ft_rotate(stack_a);
 	ft_rotate(stack_b);
-	ft_printf("rr\n");
+	write(1, "rr\n", 3);
 }

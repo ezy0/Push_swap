@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 10:48:32 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/01 11:57:01 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/16 13:22:44 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_push_a(t_stack **stack_a, t_stack **stack_b)
 	*stack_b = (*stack_b)->next;
 	aux->next = *stack_a;
 	*stack_a = aux;
-	ft_printf("pa\n");
+	write(1, "pa\n", 3);
 }
 
 void	ft_push_b(t_stack **stack_a, t_stack **stack_b)
@@ -35,5 +35,5 @@ void	ft_push_b(t_stack **stack_a, t_stack **stack_b)
 	*stack_a = (*stack_a)->next;
 	aux->next = *stack_b;
 	*stack_b = aux;
-	ft_printf("pb\n");
+	write(1, "pb\n", 3);
 }
