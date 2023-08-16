@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:54:04 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/15 10:26:27 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/16 12:03:52 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_stack {
 
 int		main(int argc, char *argv[]);
 t_stack	*ft_argv_to_stack(int size, char *argv[]);
-void	ft_error(void);
+void	ft_error(t_stack *stack);
 int		ft_check_arg(t_stack *list, char *arg);
 void	ft_free_stack(t_stack *stack);
 t_stack	*ft_new_node(int elem);
@@ -65,7 +65,5 @@ void	ft_sort_b(t_stack **stack_a, t_stack **stack_b);
 int		ft_ab_sorted(t_stack *stack_a, t_stack *stack_b);
 int		ft_b_sorted(t_stack *stack_b);
 t_stack	*ft_last_elem(t_stack *stack);
-
-void	ft_print_stacks(t_stack *stack_a, t_stack *stack_b);
 
 #endif

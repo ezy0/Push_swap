@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 12:35:40 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/03 13:02:48 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/16 11:40:36 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_free_stack(t_stack *stack)
 	}
 }
 
-t_stack	*ft_new_node(int elem) //OJO CON ESTAS LLAMADAS QUE PUEDE HABER LEAKS
+t_stack	*ft_new_node(int elem)
 {
 	t_stack	*stack;
 

@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:55:01 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/15 10:22:03 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/15 12:23:49 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char *argv[])
 	if (argc < 2)
 		return (0);
 	if (ft_strlen(argv[1]) == 0)
-		ft_error();
+		ft_error(0);
 	stack_a = ft_argv_to_stack(argc, argv);
 	stack_b = 0;
 	if (ft_stacksize(stack_a) <= 5)
@@ -45,12 +45,11 @@ t_stack	*ft_argv_to_stack(int size, char *argv[])
 	while (++i < size)
 	{
 		if (ft_check_arg(stack, argv[i]))
-		{
-			ft_free_stack(stack);
-			ft_error();
-		}
+			ft_error(stack);
 		if (!stack)
 			stack = ft_new_node((int)ft_atoi(argv[i]));
+		if (!stack)
+			ft_error(stack);
 		if (aux)
 		{
 			aux->next = ft_new_node((int)ft_atoi(argv[i]));

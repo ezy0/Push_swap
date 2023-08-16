@@ -6,14 +6,15 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:04:35 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/15 10:26:16 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/16 12:06:29 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_error(void)
+void	ft_error(t_stack *stack)
 {
-	ft_putstr_fd("Error\n", 2);
+	ft_free_stack(stack);
+	write(2, "Error\n", 6);
 	exit(1);
 }
