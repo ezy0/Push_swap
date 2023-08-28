@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:54:04 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/28 10:48:39 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/28 11:13:18 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ t_stack	*ft_split_to_stack(int size, char *split[]);
 int		ft_check_arg(t_stack *list, char *arg);
 //HANDLER
 void	ft_error(t_stack *stack);
+void	ft_clean_split(char	**split);
+//UTILS
 void	ft_free_stack(t_stack *stack);
 t_stack	*ft_new_node(int elem);
 int		ft_stacksize(t_stack *stack);

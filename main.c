@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:55:01 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/28 10:49:41 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/28 11:16:28 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ t_stack	*ft_split_to_stack(int size, char *split[])
 		if (i == 0)
 			aux = stack;
 	}
+	ft_clean_split(split);
 	return (stack);
 }
 

@@ -6,7 +6,7 @@
 #    By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/27 10:48:27 by migmoren          #+#    #+#              #
-#    Updated: 2023/08/28 08:24:15 by migmoren         ###   ########.fr        #
+#    Updated: 2023/08/28 10:58:47 by migmoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CC = gcc -Wall -Wextra -Werror
 INCLUDE = -Llibft -lft -I ./
 
 SRC = main.c ft_handler.c ft_utils.c swap.c push.c rotate.c reverse.c sort.c \
-	ft_radix_conversion.c small_sort.c print_stacks.c
+	ft_radix_conversion.c small_sort.c
 OBJS = ${SRC:.c=.o}
 
 %.o: %.c libft/libft.a
