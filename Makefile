@@ -6,22 +6,22 @@
 #    By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/27 10:48:27 by migmoren          #+#    #+#              #
-#    Updated: 2023/08/16 12:44:02 by migmoren         ###   ########.fr        #
+#    Updated: 2023/08/28 08:24:15 by migmoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-CC = gcc -Wall -Wextra -Werror -g -fsanitize=address
+CC = gcc -Wall -Wextra -Werror
 
 INCLUDE = -Llibft -lft -I ./
 
 SRC = main.c ft_handler.c ft_utils.c swap.c push.c rotate.c reverse.c sort.c \
-	ft_radix_conversion.c small_sort.c
+	ft_radix_conversion.c small_sort.c print_stacks.c
 OBJS = ${SRC:.c=.o}
 
 %.o: %.c libft/libft.a
-	${CC} $< -c -o $@
+	@${CC} $< -c -o $@
 
 all: libft ${NAME}
 
@@ -29,7 +29,8 @@ libft:
 	@make bonus -C libft
 
 ${NAME}: ${OBJS} 
-	${CC} ${SRC} ${INCLUDE} -o ${NAME}
+	@${CC} ${SRC} ${INCLUDE} -o ${NAME}
+	@echo "Program Created"
 
 clean:
 	@make clean -C libft

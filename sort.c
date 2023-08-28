@@ -6,7 +6,7 @@
 /*   By: migmoren <migmoren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 18:25:51 by migmoren          #+#    #+#             */
-/*   Updated: 2023/08/16 12:30:30 by migmoren         ###   ########.fr       */
+/*   Updated: 2023/08/17 14:21:17 by migmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	ft_is_sorted(t_stack *stack_a, t_stack *stack_b)
 	int		i;
 	t_stack	*aux;
 
-	i = ft_stacksize(stack_a);
-	aux = stack_a;
 	if (stack_b || !stack_a)
 		return (0);
+	i = ft_stacksize(stack_a);
+	aux = stack_a;
 	while (i > 1)
 	{
 		if (aux->elem > aux->next->elem)
